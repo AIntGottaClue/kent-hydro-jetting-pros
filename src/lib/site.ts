@@ -29,9 +29,9 @@ export const navLinks = [
 
 export const footerServiceLinks = [
   { href: '/hydro-jetting', label: 'Hydro Jetting' },
-  { href: '/services#residential-drain-cleaning', label: 'Residential Drain Cleaning' },
-  { href: '/services#commercial-grease-lines', label: 'Commercial and Grease Lines' },
-  { href: '/services#sewer-camera-inspection', label: 'Sewer Camera Inspection' },
+  { href: '/services/residential-drain-cleaning', label: 'Residential Drain Cleaning' },
+  { href: '/services/commercial-grease-lines', label: 'Commercial and Grease Lines' },
+  { href: '/services/sewer-camera-inspection', label: 'Sewer Camera Inspection' },
   { href: '/our-process', label: 'Our Process' },
 ] as const
 

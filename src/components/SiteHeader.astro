@@ -2,6 +2,7 @@
 import { ChevronDown, Menu, Phone, X } from '@lucide/astro';
 import Logo from './Logo.astro';
 import { business, navLinks } from '../lib/site';
+import { servicePages } from '../data/servicePages';
 import { areas } from '../data/areas';
 import { cn, u } from '../lib/utils';
 const path = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '').replace(/\/$/, '') || '/';
@@ -14,12 +15,12 @@ const path = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, 
         {navLinks.map((link) => {
           const active = path === link.href || (link.href === '/service-areas' && path.startsWith('/service-areas'));
           const linkClass = cn('rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-primary', active ? 'text-primary underline decoration-accent decoration-2 underline-offset-8' : 'text-muted-foreground');
-          return link.href === '/service-areas' ? (
+          return link.href === '/service-areas' || link.href === '/services' ? (
             <li class="group relative">
               <a href={u(link.href)} aria-current={active ? 'page' : undefined} class={cn(linkClass, 'inline-flex items-center gap-1')}>{link.label}<ChevronDown class="size-3.5" aria-hidden="true" /></a>
               <ul class="invisible absolute left-0 top-full z-50 grid min-w-56 gap-0.5 rounded-lg border border-border bg-card p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                {areas.map((area) => (
-                  <li><a href={u(`/service-areas/${area.slug}`)} class="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary">{area.name}</a></li>
+                {(link.href === '/services' ? servicePages : areas).map((area) => (
+                  <li><a href={u(`${link.href}/${area.slug}`)} class="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary">{area.name}</a></li>
                 ))}
               </ul>
             </li>
@@ -50,10 +51,10 @@ const path = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, 
           return (
             <li>
               <a href={u(link.href)} aria-current={active ? 'page' : undefined} class={cn('block rounded-md px-3 py-3 text-base font-medium hover:bg-muted', active ? 'bg-muted text-primary' : 'text-foreground')}>{link.label}</a>
-              {link.href === '/service-areas' && (
+              {(link.href === '/service-areas' || link.href === '/services') && (
                 <ul class="mb-2 ml-4 grid grid-cols-2 gap-x-2 border-l border-border pl-3">
-                  {areas.map((area) => (
-                    <li><a href={u(`/service-areas/${area.slug}`)} class="block rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-primary">{area.name}</a></li>
+                  {(link.href === '/services' ? servicePages : areas).map((area) => (
+                    <li><a href={u(`${link.href}/${area.slug}`)} class="block rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-primary">{area.name}</a></li>
                   ))}
                 </ul>
               )}
