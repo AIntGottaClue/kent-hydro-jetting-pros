@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'What Is Hydro Jetting? Drain Jetting in Kent, OH'
+const description =
+  'Learn how hydro jetting clears grease, roots, scale and sludge from sewer and drain lines, how it compares to snaking, and when it is the right fit for Kent, Ohio properties.'
+
+
+
+const clears = [
+  { title: 'Grease and fats', text: 'Congealed cooking grease that coats kitchen and main lines.' },
+  { title: 'Tree roots', text: 'Root intrusions at joints and cracks in sewer laterals.' },
+  { title: 'Scale and mineral buildup', text: 'Hard deposits that narrow older pipes over time.' },
+  { title: 'Sludge and soap scum', text: 'Soft buildup from laundry, bathing and everyday use.' },
+  { title: 'Sand, silt and debris', text: 'Sediment that settles in floor drains and low spots.' },
+  { title: 'Wipes and paper', text: 'Material snagged on buildup inside the line.' },
+]
+
+const comparison = [
+  { label: 'How it works', jet: 'Pressurized water scours the full pipe wall', snake: 'A rotating cable bores through the blockage' },
+  { label: 'Buildup on pipe walls', jet: 'Flushed downstream', snake: 'Often left behind' },
+  { label: 'Grease lines', jet: 'Well suited', snake: 'Tends to open a narrow path' },
+  { label: 'Root intrusions', jet: 'Cut and flushed with root nozzles', snake: 'Cut, debris may remain' },
+  { label: 'Best paired with', jet: 'Camera inspection before and after', snake: 'Quick openings on minor clogs' },
+]
+const path = '/hydro-jetting';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Hydro Jetting Services in Kent, OH"
+    intro="Hydro jetting uses a high-pressure water hose and specialized nozzle to scrub the inside of drain and sewer pipes clean. It is the only thing we do, and we do it carefully."
+    points={['Cleans the full pipe wall', 'Handles grease and roots', 'Matched to pipe condition', 'Camera-verified results']}
+    breadcrumb={[{ href: '/hydro-jetting', label: 'Hydro Jetting' }]}
+    formHeading="Request Hydro Jetting"
+  />
+
+  <Section>
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+      <img
+        src={u('/images/jetting-nozzle-pipe.png')}
+        alt="Close-up of a jetting nozzle inside a sewer pipe blasting away grease buildup"
+        width="1200"
+        height="800"
+        class="aspect-[4/3] w-full rounded-xl object-cover"
+      />
+      <div>
+        <SectionHeading title="How hydro jetting cleans a pipe" />
+        <div class="mt-6 space-y-4 leading-relaxed text-muted-foreground">
+          <p>
+            A jetting hose is fed into the line through a cleanout or other access point. Water pumped at high pressure
+            exits the nozzle through rear-facing jets that propel the hose forward, while forward and angled jets break
+            up blockages ahead of it.
+          </p>
+          <p>
+            As the hose is pulled back, those jets scour the full circumference of the pipe and wash loosened grease,
+            sludge and debris downstream to the main sewer. The result is a line that is clean wall to wall, not just
+            opened up.
+          </p>
+          <p>
+            Different nozzles are used for different jobs, such as penetrating heavy blockages, cutting roots or
+            polishing grease from the pipe wall. Learn how we choose them on our{' '}
+            <a href={u('/our-process')} class="font-semibold text-primary underline">
+              process page
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section muted>
+    <SectionHeading
+      title="What hydro jetting removes from your lines"
+      intro="Most recurring clogs in Kent homes and businesses come from a handful of common culprits."
+    />
+    <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {clears.map((item) => (
+        <li class="rounded-lg border border-border bg-card p-6">
+          <h3 class="text-lg font-bold text-primary">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section>
+    <SectionHeading
+      title="Hydro jetting vs. drain snaking"
+      intro="Both methods have a place. Here is how they differ when a line keeps clogging."
+    />
+    <div class="mt-10 overflow-x-auto rounded-lg border border-border">
+      <table class="w-full min-w-[560px] text-left text-sm">
+        <caption class="sr-only">Comparison of hydro jetting and drain snaking</caption>
+        <thead class="bg-primary text-primary-foreground">
+          <tr>
+            <th scope="col" class="px-5 py-4 font-semibold">Factor</th>
+            <th scope="col" class="px-5 py-4 font-semibold">Hydro jetting</th>
+            <th scope="col" class="px-5 py-4 font-semibold">Snaking</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparison.map((row) => (
+            <tr class="border-t border-border bg-card">
+              <th scope="row" class="px-5 py-4 font-semibold text-primary">{row.label}</th>
+              <td class="px-5 py-4">{row.jet}</td>
+              <td class="px-5 py-4 text-muted-foreground">{row.snake}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <Section muted>
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading title="When hydro jetting is a good fit" />
+        <ul class="mt-6 list-disc space-y-2 pl-5 leading-relaxed text-muted-foreground">
+          <li>Clogs that come back after snaking</li>
+          <li>Grease buildup in kitchen or commercial lines</li>
+          <li>Root intrusion in a sewer lateral</li>
+          <li>Routine maintenance on heavy-use lines</li>
+          <li>Cleaning a line before a camera inspection or repair assessment</li>
+        </ul>
+      </div>
+      <div>
+        <SectionHeading title="When we look first" />
+        <p class="mt-6 leading-relaxed text-muted-foreground">
+          Jetting is effective on pipes in sound condition. If a line may be collapsed, badly offset or severely
+          deteriorated, a{' '}
+          <a href={u('/services#sewer-camera-inspection')} class="font-semibold text-primary underline">
+            sewer camera inspection
+          </a>{' '}
+          comes first so we can talk with you about whether jetting is appropriate. We will always explain what we see
+          before moving forward.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <RelatedLinks
+    links={[
+      { href: '/services', title: 'Our services', description: 'Residential, commercial grease line and camera inspection work.' },
+      { href: '/our-process', title: 'Our process', description: 'What happens from your first call to the final camera pass.' },
+      { href: '/faq', title: 'Hydro jetting FAQ', description: 'Answers about safety, roots, timing and preparation.' },
+    ]}
+  />
+
+  <CtaBand title="Ready to get your line truly clean?" text="Tell us about the problem and we will follow up to schedule hydro jetting." />
+</Base>

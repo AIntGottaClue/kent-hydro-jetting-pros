@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Drain, Grease Line and Sewer Jetting Services | Kent, OH'
+const description =
+  'Residential drain cleaning, commercial grease line jetting and sewer camera inspection in Kent, Ohio. Every service is built around professional hydro jetting.'
+
+
+
+const services = [
+  {
+    id: 'residential-drain-cleaning',
+    title: 'Residential Drain Cleaning',
+    text: 'Homes in Kent and nearby towns deal with grease in kitchen lines, lint in laundry drains, silt in basement floor drains and roots in older sewer laterals. We hydro jet the line to remove that buildup from the pipe walls so water can flow freely again.',
+    bullets: ['Main sewer lines and laterals', 'Kitchen and laundry lines', 'Basement floor drains', 'Root intrusion clearing'],
+    image: { src: '/images/hydro-jetting-hero.png', alt: 'Technician feeding a jetting hose into an outdoor residential sewer cleanout' },
+  },
+  {
+    id: 'commercial-grease-lines',
+    title: 'Commercial and Grease Lines',
+    text: 'Restaurants, cafeterias, multi-unit buildings and other commercial properties put heavy demand on their drain lines. Hydro jetting removes grease and sludge from the pipe walls, and routine maintenance jetting can be scheduled around your hours.',
+    bullets: ['Restaurant and kitchen grease lines', 'Multi-unit and mixed-use buildings', 'Floor and trench drains', 'Scheduled maintenance jetting'],
+    image: { src: '/images/commercial-grease-line.png', alt: 'Commercial kitchen floor drain with a coiled hydro jetting hose' },
+  },
+  {
+    id: 'sewer-camera-inspection',
+    title: 'Sewer Camera Inspection',
+    text: 'A sewer camera shows what is really inside the pipe: the cause of the blockage, the pipe material and its condition. We use inspection to plan jetting and to verify the result, and we walk you through the footage so you understand what we found.',
+    bullets: ['Pre-jetting diagnosis', 'Post-jetting verification', 'Locating roots, offsets and sags', 'Footage review with you'],
+    image: { src: '/images/sewer-camera-inspection.png', alt: 'Sewer inspection camera monitor showing the inside of a drain pipe' },
+  },
+]
+const path = '/services';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Hydro Jetting Services for Kent Homes and Businesses"
+    intro="From a backed-up basement floor drain to a busy restaurant grease line, every service we offer is centered on hydro jetting and the camera work that supports it."
+    points={['Residential drain cleaning', 'Commercial and grease lines', 'Sewer camera inspection', 'Main line and lateral jetting']}
+    breadcrumb={[{ href: '/services', label: 'Services' }]}
+  />
+
+  {services.map((service, index) => (
+    <Section id={service.id} muted={index % 2 === 1}>
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class={cn(index % 2 === 1 && 'lg:order-2')}>
+          <SectionHeading title={service.title} />
+          <p class="mt-5 leading-relaxed text-muted-foreground">{service.text}</p>
+          <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+            {service.bullets.map((bullet) => (
+              <li class="flex items-start gap-2.5">
+                <Check class="mt-0.5 size-5 shrink-0 text-ring" aria-hidden="true" />
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <img
+          src={service.image.src}
+          alt={service.image.alt}
+          width="1200"
+          height="800"
+          class="aspect-[4/3] w-full rounded-xl object-cover"
+        />
+      </div>
+    </Section>
+  ))}
+
+  <RelatedLinks
+    links={[
+      { href: '/hydro-jetting', title: 'How hydro jetting works', description: 'What jetting removes and how it compares to snaking.' },
+      { href: '/our-process', title: 'Our process', description: 'Inspection, jetting and verification, step by step.' },
+      { href: '/service-areas', title: 'Service areas', description: 'Kent and the nearby towns we serve.' },
+    ]}
+  />
+
+  <CtaBand title="Not sure which service you need?" text="Describe the problem in the form and we will help you figure out the right next step." />
+</Base>

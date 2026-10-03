@@ -1,0 +1,9 @@
+---
+import Link from './Link.astro';
+import { ArrowRight } from '@lucide/astro';
+const { href } = Astro.props;
+---
+<Link href={href} class="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline">
+  <slot />
+  <ArrowRight class="size-4" aria-hidden="true" />
+</Link>

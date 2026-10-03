@@ -1,0 +1,89 @@
+---
+import { MapPin, Phone } from '@lucide/astro';
+import Logo from './Logo.astro';
+import Link from './Link.astro';
+import { areas } from '../data/areas';
+import { business, footerServiceLinks, serviceAreas } from '../lib/site';
+---
+    <footer class="bg-primary text-primary-foreground">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <div class="flex flex-col gap-4">
+          <Logo inverted={true} />
+          <p class="max-w-xs text-sm leading-relaxed text-primary-foreground/75">
+            {business.name} is a hydro jetting specialist clearing drain and sewer lines for homes and businesses in Kent, Ohio and nearby towns.
+          </p>
+        </div>
+
+        <nav aria-labelledby="footer-services">
+          <h2 id="footer-services" class="text-sm font-semibold uppercase tracking-wider text-accent">
+            Services
+          </h2>
+          <ul class="mt-4 flex flex-col gap-2.5 text-sm">
+            {footerServiceLinks.map((link) => (
+              <li>
+                <Link href={link.href} class="text-primary-foreground/80 hover:text-primary-foreground hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-areas">
+          <h2 id="footer-areas" class="text-sm font-semibold uppercase tracking-wider text-accent">
+            Service Areas
+          </h2>
+          <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
+            {areas.map((area) => (
+              <li>
+                <Link href={`/service-areas/${area.slug}`} class="text-primary-foreground/80 hover:text-primary-foreground hover:underline">
+                  {area.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-accent">Contact</h2>
+          <ul class="mt-4 flex flex-col gap-3 text-sm">
+            <li>
+              <a href={business.phoneHref} class="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground">
+                <Phone class="size-4 text-accent" aria-hidden="true" />
+                {business.phoneDisplay}
+              </a>
+            </li>
+            <li class="flex items-center gap-2 text-primary-foreground/80">
+              <MapPin class="size-4 text-accent" aria-hidden="true" />
+              Kent, Ohio
+            </li>
+          </ul>
+          <Link
+            href="/contact"
+            class="mt-6 inline-flex rounded-md bg-cta px-4 py-2.5 text-sm font-semibold text-cta-foreground hover:bg-cta/90"
+          >
+            Request Service
+          </Link>
+        </div>
+      </div>
+
+      <div class="border-t border-primary-foreground/15">
+        <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm text-primary-foreground/70 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>
+            &copy; {new Date().getFullYear()} {business.name}. All rights reserved.
+          </p>
+          <ul class="flex gap-6">
+            <li>
+              <Link href="/privacy" class="hover:text-primary-foreground hover:underline">
+                Privacy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" class="hover:text-primary-foreground hover:underline">
+                Terms
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>

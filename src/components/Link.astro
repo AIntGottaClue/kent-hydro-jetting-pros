@@ -1,0 +1,5 @@
+---
+import { u } from '../lib/utils';
+const { href, ...rest } = Astro.props;
+---
+<a href={u(href)} {...rest}><slot /></a>

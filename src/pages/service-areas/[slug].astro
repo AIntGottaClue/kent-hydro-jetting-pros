@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import RelatedLinks from '../../components/RelatedLinks.astro';
+import Section from '../../components/Section.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import TextLink from '../../components/TextLink.astro';
+import { AlertTriangle, MapPin } from '@lucide/astro';
+import { areas, areaBySlug } from '../../data/areas';
+import { SITE_URL, business } from '../../lib/site';
+import { u } from '../../lib/utils';
+
+export function getStaticPaths() {
+  return areas.map((area) => ({ params: { slug: area.slug }, props: { area } }));
+}
+const { area: a } = Astro.props;
+const path = `/service-areas/${a.slug}`;
+const title = `Hydro Jetting in ${a.name}, Ohio | ${business.name}`;
+const description = `${business.name} clears grease, roots, scale and sludge from drain and sewer lines in ${a.name}, OH. Residential and commercial hydro jetting with camera inspection.`;
+const pageUrl = `${SITE_URL}${path}`;
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: `Hydro jetting in ${a.name}, Ohio`,
+    serviceType: 'Hydro jetting',
+    provider: { '@id': `${SITE_URL}/#business` },
+    areaServed: { '@type': a.place === 'city' ? 'City' : 'AdministrativeArea', name: `${a.name}, Ohio` },
+    description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${SITE_URL}/service-areas` },
+      { '@type': 'ListItem', position: 3, name: a.name, item: pageUrl },
+    ],
+  },
+];
+const nearby = a.nearby.map((s) => areaBySlug[s]);
+---
+<Base title={title} description={description} path={path}>
+  {schema.map((s) => <JsonLd data={s} />)}
+  <PageHero
+    location={`${a.name}, OH`}
+    title={`Hydro Jetting in ${a.name}, Ohio`}
+    intro={a.intro}
+    points={['Homes and businesses', 'Camera inspection available', `Serving ${a.name}, ${a.county} County`, 'Grease, roots and scale']}
+    breadcrumb={[{ href: '/service-areas', label: 'Service Areas' }, { href: path, label: a.name }]}
+    image={{ src: '/images/hydro-jetting-hero.png', alt: '' }}
+    formHeading="Request Service"
+  />
+
+  <Section>
+    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
+      <div>
+        <SectionHeading title={`Drain and sewer line cleaning in ${a.name}`} />
+        <div class="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
+          {a.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+        <div class="mt-8 flex flex-wrap gap-6">
+          <TextLink href="/hydro-jetting">How hydro jetting works</TextLink>
+          <TextLink href="/services">Our services</TextLink>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-primary">Common calls in {a.name}</h3>
+        <ul class="mt-5 grid gap-3">
+          {a.calls.map((call) => (
+            <li class="flex items-start gap-3 rounded-md border border-border bg-card p-4">
+              <AlertTriangle class="mt-0.5 size-5 shrink-0 text-cta" aria-hidden="true" />
+              <span>{call}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Section muted>
+    <SectionHeading title="Nearby towns we serve" />
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {nearby.map((n) => (
+        <li>
+          <a href={u(`/service-areas/${n.slug}`)} class="group flex items-center gap-2 rounded-lg border border-border bg-card p-5 font-semibold text-primary hover:shadow-md">
+            <MapPin class="size-4 text-ring" aria-hidden="true" />
+            <span class="group-hover:underline">Hydro jetting in {n.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-6"><TextLink href="/service-areas">All service areas</TextLink></div>
+  </Section>
+
+  <RelatedLinks
+    links={[
+      { href: '/services', title: 'Services', description: 'Hydro jetting, drain cleaning, grease lines and camera inspection.' },
+      { href: '/our-process', title: 'Our process', description: 'How a visit works from inspection to the final camera pass.' },
+      { href: '/contact', title: 'Contact', description: `Request service at your ${a.name} address.` },
+    ]}
+  />
+  <CtaBand title={`Need hydro jetting in ${a.name}?`} text="Include your address and what the drain is doing, and we will follow up." />
+</Base>

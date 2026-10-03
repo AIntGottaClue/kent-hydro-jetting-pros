@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Terms of Use | Kent Hydro Jetting Pros'
+const description =
+  'Review the terms that apply when you use the Kent Hydro Jetting Pros website and submit a service request online.'
+const path = '/terms';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Terms of Use"
+    intro="These terms apply to your use of this website. By using the site, you agree to them."
+    breadcrumb={[{ href: '/terms', label: 'Terms' }]}
+  />
+  <Section>
+    <Prose>
+      <h2>Use of this website</h2>
+      <p>
+        This website provides general information about hydro jetting and related services offered by {business.name}.
+        You agree to use the site only for lawful purposes and not to interfere with its operation.
+      </p>
+      <h2>Informational content</h2>
+      <p>
+        Content on this site is for general information only and is not a substitute for an on-site evaluation of
+        your plumbing. Every property and pipe system is different.
+      </p>
+      <h2>Service requests</h2>
+      <p>
+        Submitting a request through our form does not create a service agreement. Scheduling and the scope of any
+        work are confirmed directly with you.
+      </p>
+      <h2>Intellectual property</h2>
+      <p>
+        Text, images and design on this site belong to {business.name} or are used with permission, and may not be
+        reproduced without consent.
+      </p>
+      <h2>Limitation of liability</h2>
+      <p>
+        This website is provided as is. To the extent permitted by law, {business.name} is not liable for damages
+        arising from the use of this website or reliance on its content.
+      </p>
+      <h2>Changes and contact</h2>
+      <p>
+        We may update these terms at any time. Questions can be sent through our <a href={u('/contact')}>contact page</a> or by calling {business.phoneDisplay}. See also our <a href={u('/privacy')}>Privacy Policy</a>.
+      </p>
+    </Prose>
+  </Section>
+</Base>

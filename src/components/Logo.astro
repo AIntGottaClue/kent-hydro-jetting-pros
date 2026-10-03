@@ -1,0 +1,15 @@
+---
+import { Droplets } from '@lucide/astro';
+import { business } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const { inverted = false } = Astro.props;
+---
+<a href={u('/')} class="flex items-center gap-2.5" aria-label={`${business.name} home`}>
+  <span class={cn('flex size-9 items-center justify-center rounded-md', inverted ? 'bg-accent text-accent-foreground' : 'bg-primary text-primary-foreground')}>
+    <Droplets class="size-5" aria-hidden="true" />
+  </span>
+  <span class="flex flex-col leading-none">
+    <span class={cn('font-heading text-base font-bold tracking-tight sm:text-lg', inverted ? 'text-primary-foreground' : 'text-primary')}>Kent Hydro Jetting</span>
+    <span class={cn('text-xs font-semibold uppercase tracking-[0.2em]', inverted ? 'text-accent' : 'text-muted-foreground')}>Pros</span>
+  </span>
+</a>

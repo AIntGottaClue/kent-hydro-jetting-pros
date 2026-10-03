@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Contact Kent Hydro Jetting Pros | Request Service in Kent, OH'
+const description =
+  'Contact Kent Hydro Jetting Pros by phone or online form to request hydro jetting, drain cleaning, grease line jetting or sewer camera inspection in Kent, Ohio.'
+
+
+
+const methods = [
+  { icon: Phone, label: 'Phone', value: business.phoneDisplay, href: business.phoneHref },
+  { icon: MapPin, label: 'Location', value: 'Kent, Ohio' },
+]
+const path = '/contact';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Contact Kent Hydro Jetting Pros"
+    intro="Request hydro jetting service, ask a question about your drain or sewer line, or tell us what is going on. Use the form or give us a call."
+    breadcrumb={[{ href: '/contact', label: 'Contact' }]}
+  />
+
+  <Section>
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading title="Reach us directly" />
+        <ul class="mt-8 grid gap-4">
+          {methods.map((method) => {
+            const content = (
+              <>
+                <span class="flex size-11 items-center justify-center rounded-md bg-primary text-accent">
+                  <method.icon class="size-5" aria-hidden="true" />
+                </span>
+                <span>
+                  <span class="block text-sm text-muted-foreground">{method.label}</span>
+                  <span class="block font-semibold text-primary">{method.value}</span>
+                </span>
+              </>
+            )
+            return (
+              <li>
+                {method.href ? (
+                  <a href={method.href} class="flex items-center gap-4 rounded-lg border border-border bg-card p-5 hover:shadow-md">
+                    {content}
+                  </a>
+                ) : (
+                  <div class="flex items-center gap-4 rounded-lg border border-border bg-card p-5">{content}</div>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      <div>
+        <SectionHeading title="What to include in your request" />
+        <ul class="mt-8 list-disc space-y-2 pl-5 leading-relaxed text-muted-foreground">
+          <li>Which drains or fixtures are slow or backing up</li>
+          <li>How often the problem happens and when it started</li>
+          <li>Whether the property is a home, rental or commercial building</li>
+          <li>Where your cleanout is located, if you know</li>
+          <li>Any past backups, root problems or known pipe issues</li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <RelatedLinks
+    links={[
+      { href: '/services', title: 'Services', description: 'Residential, commercial and camera inspection work.' },
+      { href: '/service-areas', title: 'Service areas', description: 'Confirm we serve your town.' },
+      { href: '/faq', title: 'FAQ', description: 'Common questions about hydro jetting.' },
+    ]}
+  />
+</Base>

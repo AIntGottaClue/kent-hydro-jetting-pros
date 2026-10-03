@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Hydro Jetting FAQ | Kent Hydro Jetting Pros'
+const description =
+  'Answers to common hydro jetting questions: how it works, whether it is safe for pipes, root removal, grease lines, timing and how to prepare. Serving Kent, Ohio.'
+const path = '/faq';
+---
+<Base title={title} description={description} path={path}>
+
+  <JsonLd data={faqSchema(faqs)} />
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Hydro Jetting FAQ"
+    intro="Straight answers to the questions Kent homeowners and business owners ask most about hydro jetting their drain and sewer lines."
+    breadcrumb={[{ href: '/faq', label: 'FAQ' }]}
+    formHeading="Ask Us or Request Service"
+  />
+
+  <Section>
+    <div class="mx-auto max-w-3xl divide-y divide-border rounded-lg border border-border bg-card">
+      {faqs.map((faq) => (
+        <details class="group p-6 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <h2 class="text-lg font-bold text-primary">{faq.question}</h2>
+            <ChevronDown class="size-5 shrink-0 text-ring transition-transform group-open:rotate-180" aria-hidden="true" />
+          </summary>
+          <p class="mt-4 leading-relaxed text-muted-foreground">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <RelatedLinks
+    links={[
+      { href: '/hydro-jetting', title: 'Hydro jetting explained', description: 'A deeper look at how jetting works.' },
+      { href: '/our-process', title: 'Our process', description: 'Each step of a hydro jetting visit.' },
+      { href: '/service-areas', title: 'Service areas', description: 'Kent and the nearby towns we serve.' },
+    ]}
+  />
+
+  <CtaBand title="Still have a question?" text="Call us or use the form and we will get back to you." />
+</Base>

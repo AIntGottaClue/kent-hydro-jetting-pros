@@ -1,0 +1,207 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Hydro Jetting in Kent, Ohio | Kent Hydro Jetting Pros'
+const description =
+  'Kent Hydro Jetting Pros clears grease, roots, scale and sludge from drain and sewer lines in Kent, OH and nearby towns. Request hydro jetting service today.'
+
+
+
+const services = [
+  {
+    icon: Waves,
+    title: 'Hydro Jetting',
+    href: '/hydro-jetting',
+    text: 'High-pressure water scours the full pipe wall to clear buildup instead of just poking a hole through it.',
+  },
+  {
+    icon: HomeIcon,
+    title: 'Residential Drain Cleaning',
+    href: '/services#residential-drain-cleaning',
+    text: 'Kitchen, laundry, floor drain and main sewer lines in homes across Kent and surrounding towns.',
+  },
+  {
+    icon: Building2,
+    title: 'Commercial and Grease Lines',
+    href: '/services#commercial-grease-lines',
+    text: 'Jetting for restaurant kitchens, multi-unit buildings and commercial properties with heavy-use lines.',
+  },
+  {
+    icon: Camera,
+    title: 'Sewer Camera Inspection',
+    href: '/services#sewer-camera-inspection',
+    text: 'See what is inside the pipe before and after jetting so decisions are based on what is really there.',
+  },
+]
+
+const signs = [
+  'Drains that clog again soon after being snaked',
+  'Gurgling toilets or sinks when other fixtures run',
+  'Slow drains on more than one fixture at once',
+  'Sewage odors from floor drains or cleanouts',
+  'Water backing up into a basement floor drain',
+  'Known tree roots near your sewer line',
+]
+
+const steps = [
+  { title: 'Talk it through', text: 'Tell us what is happening and where your access points are.' },
+  { title: 'Inspect', text: 'A sewer camera shows the cause and the condition of the pipe.' },
+  { title: 'Jet the line', text: 'We match nozzle and pressure to the pipe and the buildup.' },
+  { title: 'Verify', text: 'A follow-up camera pass confirms the line is clear.' },
+]
+const path = '/';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Hydro Jetting in Kent, Ohio for Clogged Drains and Sewer Lines"
+    intro="We do one thing: hydro jetting. Kent Hydro Jetting Pros uses high-pressure water to clear grease, roots, scale and sludge from residential and commercial lines in Kent and nearby towns."
+    points={['Homes and businesses', 'Camera inspection available', 'Grease, roots and scale', 'Kent and nearby towns']}
+    image={{ src: '/images/hydro-jetting-hero.png', alt: '' }}
+    formHeading="Request Service"
+  />
+
+  <Section>
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading
+          title="A deeper clean than snaking alone"
+          intro="A cable machine opens a path through a clog. Hydro jetting cleans the inside of the pipe itself, flushing the grease, sludge and debris that tend to cause the next backup."
+        />
+        <p class="mt-4 leading-relaxed text-muted-foreground">
+          Because we focus only on hydro jetting, every visit is built around getting your line truly clean, from
+          choosing the right nozzle to confirming the result on camera.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-6">
+          <TextLink href="/hydro-jetting">How hydro jetting works</TextLink>
+          <TextLink href="/our-process">See our process</TextLink>
+        </div>
+      </div>
+      <img
+        src={u('/images/jetting-nozzle-pipe.png')}
+        alt="Hydro jetting nozzle spraying high-pressure water to clear grease buildup inside a sewer pipe"
+        width="1200"
+        height="800"
+        class="aspect-[4/3] w-full rounded-xl object-cover"
+      />
+    </div>
+  </Section>
+
+  <Section muted>
+    <SectionHeading
+      title="Hydro jetting services for Kent homes and businesses"
+      intro="Every service we offer is built around high-pressure water jetting and the inspection work that supports it."
+    />
+    <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((service) => (
+        <li>
+          <Link
+            href={service.href}
+            class="group flex h-full flex-col rounded-lg border border-border bg-card p-6 transition-shadow hover:shadow-md"
+          >
+            <span class="flex size-11 items-center justify-center rounded-md bg-primary text-accent">
+              <service.icon class="size-5" aria-hidden="true" />
+            </span>
+            <h3 class="mt-5 text-lg font-bold text-primary group-hover:underline">{service.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-8">
+      <TextLink href="/services">View all services</TextLink>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading
+          title="Signs your line may need hydro jetting"
+          intro="Recurring or system-wide symptoms usually point to buildup deeper in the line, not just a single clogged fixture."
+        />
+        <ul class="mt-8 grid gap-3">
+          {signs.map((sign) => (
+            <li class="flex items-start gap-3 rounded-md border border-border bg-card p-4">
+              <AlertTriangle class="mt-0.5 size-5 shrink-0 text-cta" aria-hidden="true" />
+              <span>{sign}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <SectionHeading title="Our process in four steps" />
+        <ol class="mt-8 grid gap-4">
+          {steps.map((step, index) => (
+            <li class="flex gap-4 rounded-lg bg-primary p-5 text-primary-foreground">
+              <span class="font-heading text-3xl font-extrabold text-accent">{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 class="font-bold">{step.title}</h3>
+                <p class="mt-1 text-sm text-primary-foreground/80">{step.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div class="mt-6">
+          <TextLink href="/our-process">Read the full process</TextLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section muted>
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+      <SectionHeading
+        title="Based in Kent, serving nearby towns"
+        intro="We provide hydro jetting throughout Kent and the surrounding communities of Portage and Summit counties."
+      />
+      <div>
+        <ul class="flex flex-wrap gap-2">
+          {serviceAreas.map((town) => (
+            <li class="flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium">
+              <MapPin class="size-3.5 text-ring" aria-hidden="true" />
+              {town}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-6">
+          <TextLink href="/service-areas">See all service areas</TextLink>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section>
+    <SectionHeading title="Common hydro jetting questions" />
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      {faqs.slice(0, 3).map((faq) => (
+        <div class="rounded-lg border border-border bg-card p-6">
+          <h3 class="font-bold text-primary">{faq.question}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+    <div class="mt-6">
+      <TextLink href="/faq">Read all FAQs</TextLink>
+    </div>
+  </Section>
+
+  <CtaBand
+    title="Dealing with a slow or backed-up line in Kent?"
+    text="Call or send a request and we will talk through the problem and next steps."
+  />
+</Base>

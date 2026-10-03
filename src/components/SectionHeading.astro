@@ -1,0 +1,8 @@
+---
+import { cn } from '../lib/utils';
+const { title, intro, centered = false } = Astro.props;
+---
+<div class={cn('max-w-3xl', centered && 'mx-auto text-center')}>
+  <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{title}</h2>
+  {intro && <p class="mt-4 text-lg leading-relaxed text-muted-foreground">{intro}</p>}
+</div>

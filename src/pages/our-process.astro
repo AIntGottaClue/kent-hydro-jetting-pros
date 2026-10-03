@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import JsonLd from '../components/JsonLd.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import Section from '../components/Section.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TextLink from '../components/TextLink.astro';
+import Prose from '../components/Prose.astro';
+import Link from '../components/Link.astro';
+import { AlertTriangle, Building2, Camera, House as HomeIcon, MapPin, Waves, Check, ChevronDown, Mail, Phone } from '@lucide/astro';
+import { faqs } from '../lib/faqs';
+import { faqSchema } from '../lib/seo';
+import { business, serviceAreas } from '../lib/site';
+import { cn, u } from '../lib/utils';
+const title = 'Our Hydro Jetting Process, Step by Step | Kent, Ohio'
+const description =
+  'See how Kent Hydro Jetting Pros handles a hydro jetting job, from your first call and camera inspection to nozzle selection, jetting and a final verification pass.'
+
+
+
+const steps = [
+  {
+    title: 'Your request',
+    text: 'Call or send the form. Tell us which drains are affected, how often it happens and where your cleanout or access points are, if you know.',
+  },
+  {
+    title: 'On-site assessment',
+    text: 'We confirm the symptoms, locate the best access point and protect the work area before any equipment goes into the line.',
+  },
+  {
+    title: 'Camera inspection',
+    text: 'Whenever access allows, a sewer camera is run through the line to identify the blockage, the pipe material and its general condition.',
+  },
+  {
+    title: 'Nozzle and pressure selection',
+    text: 'Based on what the camera shows, we choose a nozzle and pressure suited to the pipe and the type of buildup, whether that is grease, roots or scale.',
+  },
+  {
+    title: 'Hydro jetting',
+    text: 'The hose is fed through the line and pulled back in controlled passes, scouring the pipe walls and flushing debris downstream.',
+  },
+  {
+    title: 'Verification pass',
+    text: 'A follow-up camera pass shows the cleaned line so you can see the result rather than take our word for it.',
+  },
+  {
+    title: 'Walkthrough and recommendations',
+    text: 'We clean up the work area, review the footage with you and share anything worth watching, such as root entry points or areas of concern.',
+  },
+]
+
+const prep = [
+  'Clear a path to cleanouts, floor drains and basement access',
+  'Hold off on laundry, dishwashers and long showers during the visit',
+  'Move stored items away from the work area',
+  'Let us know about past backups or known pipe issues',
+]
+const path = '/our-process';
+---
+<Base title={title} description={description} path={path}>
+
+  <PageHero
+  location={path === '/' ? 'Homepage' : title}
+    title="Our Hydro Jetting Process"
+    intro="A clean line starts with knowing what is inside it. Our process pairs camera inspection with hydro jetting so every decision is based on what is actually in your pipe."
+    points={['Inspect before jetting', 'Nozzle matched to the job', 'Controlled jetting passes', 'Camera-verified results']}
+    breadcrumb={[{ href: '/our-process', label: 'Our Process' }]}
+  />
+
+  <Section>
+    <SectionHeading
+      title="What happens during a hydro jetting visit"
+      intro="Every property is different, but most visits follow the same steps."
+    />
+    <ol class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {steps.map((step, index) => (
+        <li class="relative rounded-lg border border-border bg-card p-6">
+          <span class="font-heading text-4xl font-extrabold text-accent">{String(index + 1).padStart(2, '0')}</span>
+          <h3 class="mt-3 text-lg font-bold text-primary">{step.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section muted>
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading title="How to prepare for your appointment" />
+        <ul class="mt-6 list-disc space-y-2 pl-5 leading-relaxed text-muted-foreground">
+          {prep.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <SectionHeading title="Keeping your line clear" />
+        <p class="mt-6 leading-relaxed text-muted-foreground">
+          Some lines stay clear for a long time after jetting. Others, such as those with root entry points or heavy
+          grease use, benefit from routine maintenance. After reviewing your footage, we will share a recommendation
+          based on what we saw. Have more questions? Visit our{' '}
+          <a href={u('/faq')} class="font-semibold text-primary underline">
+            hydro jetting FAQ
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <RelatedLinks
+    links={[
+      { href: '/hydro-jetting', title: 'About hydro jetting', description: 'How jetting works and what it removes.' },
+      { href: '/services#sewer-camera-inspection', title: 'Sewer camera inspection', description: 'How inspection supports every jetting job.' },
+      { href: '/contact', title: 'Contact us', description: 'Reach Kent Hydro Jetting Pros by phone, email or form.' },
+    ]}
+  />
+
+  <CtaBand title="Start with step one" text="Send a request or call, and we will take it from there." />
+</Base>
