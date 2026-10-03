@@ -101,3 +101,9 @@ a.cta-request:hover { background: color-mix(in oklch, currentColor 8%, transpare
 /* Keep the mobile header's call label on one line. */
 header a.cta-call { padding: .5rem .75rem; white-space: nowrap; flex-shrink: 0; }
 header .xl\:hidden { flex-shrink: 0; }
+header > div > a { flex-shrink: 0; white-space: nowrap; }
+header a.cta-request { white-space: nowrap; }
+@media (min-width:1280px) {
+  header nav[aria-label="Main"] > ul { gap: 0; }
+  header nav[aria-label="Main"] > ul > li > a { padding-left: .4rem; padding-right: .4rem; font-size: .8125rem; white-space: nowrap; }
+}
