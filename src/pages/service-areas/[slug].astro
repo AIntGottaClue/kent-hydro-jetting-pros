@@ -68,7 +68,7 @@ const nearby = a.nearby.map((s) => areaBySlug[s]);
         </div>
       </div>
       <div>
-        <h3 class="text-xl font-bold text-primary">Common calls in {a.name}</h3>
+        <h3 class="text-xl font-bold text-primary">Questions to settle in {a.name}</h3>
         <ul class="mt-5 grid gap-3">
           {a.calls.map((call) => (
             <li class="flex items-start gap-3 rounded-md border border-border bg-card p-4">
@@ -96,6 +96,14 @@ const nearby = a.nearby.map((s) => areaBySlug[s]);
     <div class="mt-6"><TextLink href="/service-areas">All service areas</TextLink></div>
   </Section>
 
+  <CtaBand title={`Request drain service in ${a.name}`} text="Include the address, affected fixtures and any previous inspection record." />
+
+  <Section>
+    <SectionHeading title={`Questions about drains in ${a.name}`} />
+    <div class="mt-8 space-y-5">{a.faqs.map(f => <details class="rounded-md border border-border bg-card p-5"><summary class="font-semibold text-primary cursor-pointer">{f.question}</summary><p class="mt-3 text-muted-foreground leading-relaxed">{f.answer}</p></details>)}</div>
+    <h3 class="mt-10 text-lg font-semibold text-primary">Local sources</h3>
+    <ul class="mt-3 space-y-2 text-sm">{a.sources.map(s => <li><a href={s.url} target="_blank" rel="noopener noreferrer" class="underline text-primary">{s.label}</a></li>)}</ul>
+  </Section>
   <RelatedLinks
     links={[
       { href: '/services', title: 'Services', description: 'Hydro jetting, drain cleaning, grease lines and camera inspection.' },
