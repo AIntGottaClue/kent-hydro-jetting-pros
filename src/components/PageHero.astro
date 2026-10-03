@@ -1,12 +1,13 @@
 ---
 import { Check, ChevronRight, Phone } from '@lucide/astro';
+import { pageImage } from '../lib/pageImages';
 import RequestForm from './RequestForm.astro';
 import { business } from '../lib/site';
 import { u } from '../lib/utils';
 const { title, intro, points, breadcrumb, image, formHeading, location = 'Homepage' } = Astro.props;
+const relevantImage = pageImage(title);
 ---
 <section class="relative overflow-hidden bg-primary text-primary-foreground">
-  {image && <img src={u(image.src)} alt="" width="1376" height="768" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover opacity-25" />}
   <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" aria-hidden="true"></div>
   <div class="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-14 lg:px-8 lg:py-20">
     <div>
@@ -25,6 +26,7 @@ const { title, intro, points, breadcrumb, image, formHeading, location = 'Homepa
       )}
       <h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-[3.4rem]">{title}</h1>
       <p class="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85">{intro}</p>
+      <img src={u(relevantImage.src)} alt={relevantImage.alt} width="1200" height="896" loading="eager" decoding="async" fetchpriority="high" class="mt-6 w-full max-w-xl rounded-md object-cover" style="height:clamp(190px,22vw,280px)" />
       {points && (
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
           {points.map((point) => (
