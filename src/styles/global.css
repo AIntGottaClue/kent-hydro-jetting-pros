@@ -97,3 +97,7 @@ a.cta-request:hover { background: color-mix(in oklch, currentColor 8%, transpare
 /* Match the Kent button radius and leave room below footer content. */
 .fab-deal { border-radius: var(--radius); }
 @media (max-width:980px) { body { padding-bottom: 94px; } .fab-deal { bottom: max(12px, env(safe-area-inset-bottom)); } }
+
+/* Keep the mobile header's call label on one line. */
+header a.cta-call { padding: .5rem .75rem; white-space: nowrap; flex-shrink: 0; }
+header .xl\:hidden { flex-shrink: 0; }
