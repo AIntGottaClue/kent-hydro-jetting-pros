@@ -1,4 +1,5 @@
 ---
+import { areas } from '../data/areas';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
@@ -171,11 +172,11 @@ const path = '/';
       />
       <div>
         <ul class="flex flex-wrap gap-2">
-          {serviceAreas.map((town) => (
-            <li class="flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium">
+          {areas.map((area) => (
+            <li><Link href={`/service-areas/${area.slug}`} class="flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-cta hover:bg-secondary focus-visible:outline-2 focus-visible:outline-cta">
               <MapPin class="size-3.5 text-ring" aria-hidden="true" />
-              {town}
-            </li>
+              {area.name}
+            </Link></li>
           ))}
         </ul>
         <div class="mt-6">

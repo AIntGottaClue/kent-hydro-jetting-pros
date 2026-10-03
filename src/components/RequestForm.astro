@@ -1,5 +1,5 @@
 ---
-import { business, serviceOptions } from '../lib/site';
+import { business } from '../lib/site';
 import { siteConfig } from '../data/siteConfig';
 const { heading = 'Request Hydro Jetting Service', location = 'Homepage' } = Astro.props;
 const inputClass = 'w-full rounded-md border border-input bg-card px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30';
@@ -12,30 +12,19 @@ const inputClass = 'w-full rounded-md border border-input bg-card px-3 py-2.5 te
     <input class="honeypot" aria-hidden="true" tabindex="-1" type="text" readonly name="page_location" value={location} />
     <input class="honeypot" aria-hidden="true" tabindex="-1" type="text" readonly name="page_code" value="HSP" />
     <div>
-      <label for="rf-name" class="mb-1.5 block text-sm font-medium">Name</label>
+      <label for="rf-name" class="mb-1.5 block text-sm font-medium">Your name</label>
       <input id="rf-name" name="full_name" type="text" autocomplete="name" required class={inputClass} />
     </div>
     <div>
-      <label for="rf-phone" class="mb-1.5 block text-sm font-medium">Phone</label>
+      <label for="rf-phone" class="mb-1.5 block text-sm font-medium">Phone number</label>
       <input id="rf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required class={inputClass} />
     </div>
     <div>
-      <label for="rf-email" class="mb-1.5 block text-sm font-medium">Email</label>
+      <label for="rf-email" class="mb-1.5 block text-sm font-medium">Email address</label>
       <input id="rf-email" name="email" type="email" autocomplete="email" class={inputClass} />
     </div>
-    <div>
-      <label for="rf-service" class="mb-1.5 block text-sm font-medium">Service needed</label>
-      <select id="rf-service" name="service_needed" required class={inputClass + ' appearance-auto'}>
-        <option value="" disabled selected>Select a service</option>
-        {serviceOptions.map((option) => <option value={option}>{option}</option>)}
-      </select>
-    </div>
     <div class="sm:col-span-2">
-      <label for="rf-address" class="mb-1.5 block text-sm font-medium">Service address</label>
-      <input id="rf-address" name="service_address" type="text" autocomplete="street-address" required class={inputClass} />
-    </div>
-    <div class="sm:col-span-2">
-      <label for="rf-message" class="mb-1.5 block text-sm font-medium">Message</label>
+      <label for="rf-message" class="mb-1.5 block text-sm font-medium">What is happening?</label>
       <textarea id="rf-message" name="page_details" rows="3" required placeholder="Which drain is backing up, how often, and where your cleanout is (if known)." class={inputClass + ' resize-y'}></textarea>
     </div>
     <label aria-hidden="true" class="honeypot">Leave this blank<input name="website" tabindex="-1" autocomplete="off" /></label>

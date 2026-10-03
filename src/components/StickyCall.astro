@@ -1,0 +1,8 @@
+---
+import { Phone } from '@lucide/astro';
+import { business } from '../lib/site';
+---
+<a href={business.phoneHref} class="fab-deal" aria-label={`Call ${business.name} at ${business.phoneDisplay}`}>
+  <span class="fab-deal-ico" aria-hidden="true"><Phone /></span>
+  <span class="fab-deal-text"><span class="fab-deal-text-k">{business.name}</span><span class="fab-deal-text-v">{business.phoneDisplay}</span></span>
+</a>
