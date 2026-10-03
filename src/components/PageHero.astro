@@ -5,7 +5,7 @@ import RequestForm from './RequestForm.astro';
 import { business } from '../lib/site';
 import { u } from '../lib/utils';
 const { title, intro, points, breadcrumb, image, formHeading, location = 'Homepage' } = Astro.props;
-const relevantImage = pageImage(title);
+const relevantImage = title.includes('Sewer Camera Inspection') ? { src: '/images/library/preventative-digital-inspection-47.jpg', alt: 'Drain inspection camera monitor showing the inside of a pipe' } : pageImage(title);
 ---
 <section class="relative overflow-hidden bg-primary text-primary-foreground">
   <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" aria-hidden="true"></div>
