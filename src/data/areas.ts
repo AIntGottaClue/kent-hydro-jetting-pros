@@ -10,15 +10,15 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Does a South End house always have old sewer pipe?",
-        "answer": "No. Housing history and pipe condition are separate facts. Repairs and replacements can change the line."
+        "question": "Does my older Kent house need a camera inspection first?",
+        "answer": "A camera inspection is useful when a main drain repeatedly backs up or the pipe condition is unknown. Kent's South End includes historic homes, but renovations and replacements mean house age alone cannot identify the drain material."
       },
       {
-        "question": "Why does a Kent rental need an access plan?",
+        "question": "What should I do if a drain backs up in my Kent rental?",
         "answer": "Identify the affected unit, manager and shared drain access before arranging work. Supply previous drain reports if available."
       },
       {
-        "question": "Who treats Kent municipal wastewater?",
+        "question": "Could my Kent backup involve the public sewer?",
         "answer": "The City of Kent Water Reclamation Division treats wastewater delivered through the sanitary collection system."
       },
       {
@@ -79,11 +79,11 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Why ask when a Stow house was built?",
-        "answer": "The city plan documents homes from different eras. That provides context, but does not prove present pipe material."
+        "question": "Is hydro jetting suitable for an older Stow home?",
+        "answer": "It may be suitable if the line is sound. Stow's plan documents homes from different eras, so check pipe condition and repair history before selecting high-pressure cleaning."
       },
       {
-        "question": "Who provides Stow sanitary sewer?",
+        "question": "Who should I call if several Stow homes have sewer backups?",
         "answer": "The city names Summit County Department of Sanitary Sewer Services, separately from its water department."
       },
       {
@@ -144,11 +144,11 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Does a historic Ravenna address prove clay pipe?",
-        "answer": "No. Building history and private pipe material are separate facts. Use inspection and replacement records."
+        "question": "Should I inspect the drain before jetting an older Ravenna home?",
+        "answer": "A camera inspection can help when the material or condition is unknown. Ravenna's historic building stock does not prove that each private drain still has its original pipe."
       },
       {
-        "question": "Who treats municipal wastewater?",
+        "question": "Could a backup at my Ravenna home involve the city sewer?",
         "answer": "Ravenna Water Reclamation Facility serves residential and commercial customers on its collection system."
       },
       {
@@ -209,11 +209,11 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Are Streetsboro homes all new construction?",
-        "answer": "No. The adopted master plan documents substantial housing from 1960 through 1999 and more recent homes."
+        "question": "Does a newer Streetsboro house still need a drain inspection?",
+        "answer": "Yes, an inspection can still be useful for a recurring backup. Newer construction does not rule out damage or buildup, and Streetsboro's housing also includes homes from earlier decades."
       },
       {
-        "question": "Why identify apartments or manufactured homes?",
+        "question": "Who should arrange access if my Streetsboro home uses a shared drain?",
         "answer": "The owner or manager may control a shared collection line and its access points."
       },
       {
@@ -282,7 +282,7 @@ export const areas: Area[] = [
         "answer": "Summit County operates the transferred system; the city directs service requests to that department."
       },
       {
-        "question": "Why mention rainfall in a request?",
+        "question": "Why does my Hudson basement back up when it rains?",
         "answer": "Hudson documents inflow, infiltration and pumping problems during the August 2024 flooding. Timing can distinguish a network concern from a private blockage."
       },
       {
@@ -343,19 +343,19 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Why does the Tallmadge sewer district matter?",
+        "question": "Who should I call about a public sewer backup in Tallmadge?",
         "answer": "District I public sewers are city-maintained; District II public sewers are county-operated. The right utility contact depends on the address."
       },
       {
-        "question": "Can the city bill identify the operator?",
+        "question": "Does my Tallmadge utility bill tell me who maintains the sewer?",
         "answer": "Not by itself. Tallmadge also bills connected District II residents even though the county operates that system."
       },
       {
-        "question": "Is every Tallmadge home on sanitary sewer?",
-        "answer": "Do not assume so. The city publishes septic information alongside its sewer districts. Check the actual property connection."
+        "question": "Is my Tallmadge home on public sewer or septic?",
+        "answer": "Check your property records or ask the utility about your address. Tallmadge has both sanitary sewer districts and properties with septic systems, so a city address alone does not settle the connection."
       },
       {
-        "question": "Who reviews a septic replacement?",
+        "question": "Who should I contact if my Tallmadge septic system needs replacing?",
         "answer": "For a Summit County property, Summit County Public Health handles site and soil evaluation and installation or alteration permits. Confirm the exact parcel jurisdiction."
       },
       {
@@ -412,11 +412,11 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "What is the city stormwater inspection for?",
+        "question": "Could a stormwater connection be causing my Cuyahoga Falls backup?",
         "answer": "It identifies clean-water inflow, infiltration and improper sanitary connections on private property."
       },
       {
-        "question": "Is there a disclosure when a house is sold?",
+        "question": "Should I check the stormwater report when buying a Cuyahoga Falls home?",
         "answer": "The city says both buyer and seller must sign the stormwater inspection disclosure."
       },
       {
@@ -481,7 +481,7 @@ export const areas: Area[] = [
         "answer": "Summit County provides sanitary service. Munroe Falls handles public water and stormwater under its Water Division."
       },
       {
-        "question": "Does the city water bill settle a sanitary problem?",
+        "question": "Should I call Munroe Falls or the county about a sewer backup?",
         "answer": "No. The utility guide describes separate responsibilities."
       },
       {
@@ -542,7 +542,7 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Does a Brimfield water supplier prove sewer service?",
+        "question": "Is my Brimfield home on public sewer or septic?",
         "answer": "No. The township lists several suppliers and wells, so verify the wastewater connection separately."
       },
       {
@@ -607,15 +607,15 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Is every township home on septic?",
+        "question": "How do I check whether my Franklin Township home uses septic?",
         "answer": "Do not assume so. Check the actual property connection and county records."
       },
       {
-        "question": "Who oversees onsite treatment?",
+        "question": "Who should I contact about septic trouble in Franklin Township?",
         "answer": "Portage County Health District publishes the permitting, inspection and soil guidance."
       },
       {
-        "question": "Does zoning approval replace a sewer permit?",
+        "question": "Do I need separate approval if my Franklin Township drain needs repair?",
         "answer": "No. Township zoning and county sanitary requirements address different scopes."
       },
       {
@@ -672,12 +672,12 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Does an old plan prove sewer is available today?",
+        "question": "How can I check whether my Rootstown home has public sewer?",
         "answer": "No. Confirm current service at the exact address with county Water Resources."
       },
       {
-        "question": "Why mention State Route 44?",
-        "answer": "The township plan identifies a mixed-use corridor. Property type and access matter more than assuming one setup for every address."
+        "question": "What should I include when requesting service at a Rootstown home or business?",
+        "answer": "Send the address, property type, affected drain and cleanout access. Rootstown's plan describes both residential land and commercial development along State Route 44, so access should be checked for the property rather than assumed."
       },
       {
         "question": "Who handles onsite treatment?",
@@ -737,7 +737,7 @@ export const areas: Area[] = [
     ],
     "faqs": [
       {
-        "question": "Does State Route 43 matter for wastewater?",
+        "question": "How can I check the sewer connection at my Aurora home?",
         "answer": "Aurora uses it to describe the general Central/Westerly split, with exceptions. Verify the exact address."
       },
       {

@@ -41,10 +41,12 @@ const schema = [
     ],
   },
 ];
+const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: a.faqs.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) };
 const nearby = a.nearby.map((s) => areaBySlug[s]);
 ---
 <Base title={title} description={description} path={path}>
   {schema.map((s) => <JsonLd data={s} />)}
+  <JsonLd data={faqSchema} />
   <PageHero
     location={`${a.name}, OH`}
     title={`Hydro Jetting in ${a.name}, Ohio`}
@@ -56,7 +58,7 @@ const nearby = a.nearby.map((s) => areaBySlug[s]);
   />
 
   <Section>
-    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
+    <div class="max-w-4xl">
       <div>
         <SectionHeading title={`Drain and sewer line cleaning in ${a.name}`} />
         <div class="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
@@ -67,17 +69,7 @@ const nearby = a.nearby.map((s) => areaBySlug[s]);
           <TextLink href="/services">Our services</TextLink>
         </div>
       </div>
-      <div>
-        <h3 class="text-xl font-bold text-primary">Questions to settle in {a.name}</h3>
-        <ul class="mt-5 grid gap-3">
-          {a.calls.map((call) => (
-            <li class="flex items-start gap-3 rounded-md border border-border bg-card p-4">
-              <AlertTriangle class="mt-0.5 size-5 shrink-0 text-cta" aria-hidden="true" />
-              <span>{call}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+
     </div>
   </Section>
 
@@ -99,7 +91,7 @@ const nearby = a.nearby.map((s) => areaBySlug[s]);
   <CtaBand title={`Request drain service in ${a.name}`} text="Include the address, affected fixtures and any previous inspection record." />
 
   <Section>
-    <SectionHeading title={`Questions about drains in ${a.name}`} />
+    <SectionHeading title={`Drain cleaning FAQs in ${a.name}`} />
     <div class="mt-8 space-y-5">{a.faqs.map(f => <details class="rounded-md border border-border bg-card p-5"><summary class="font-semibold text-primary cursor-pointer">{f.question}</summary><p class="mt-3 text-muted-foreground leading-relaxed">{f.answer}</p></details>)}</div>
     <h3 class="mt-10 text-lg font-semibold text-primary">Local sources</h3>
     <ul class="mt-3 space-y-2 text-sm">{a.sources.map(s => <li><a href={s.url} target="_blank" rel="noopener noreferrer" class="underline text-primary">{s.label}</a></li>)}</ul>
