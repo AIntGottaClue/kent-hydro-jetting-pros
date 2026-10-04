@@ -108,3 +108,11 @@ header a.cta-request { white-space: nowrap; }
   header nav[aria-label="Main"] > ul { gap: 0; }
   header nav[aria-label="Main"] > ul > li > a { padding-left: .4rem; padding-right: .4rem; font-size: .8125rem; white-space: nowrap; }
 }
+
+/* Success replaces the form only after a confirmed tracker response. */
+[data-lead-form][hidden],.lead-success[hidden]{display:none!important}
+.lead-success{outline:none;text-align:center}
+.lead-success svg{display:block;margin:0 auto 20px;color:#16a34a}
+.lead-success h2{font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.2;margin:0 0 20px}
+.lead-success p{line-height:1.65;margin:0 auto 24px;max-width:34em}
+.lead-success .lead-success__again{background:none;border:0;border-radius:0;padding:0;margin-top:8px;font:inherit;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
