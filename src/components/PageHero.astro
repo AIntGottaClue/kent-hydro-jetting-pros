@@ -26,7 +26,7 @@ const relevantImage = title.includes('Sewer Camera Inspection') ? { src: '/image
       )}
       <h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-[3.4rem]">{title}</h1>
       <p class="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85">{intro}</p>
-      <img src={u(relevantImage.src)} alt={relevantImage.alt} width="1200" height="896" loading="eager" decoding="async" fetchpriority="high" class="mt-6 w-full max-w-xl rounded-md object-cover" style="height:clamp(190px,22vw,280px)" />
+      {!/^Privacy(?: Policy)?$|^Terms(?: of (?:Service|Use))?$/i.test(title) && <img src={u(relevantImage.src)} alt={relevantImage.alt} width="1200" height="896" loading="eager" decoding="async" fetchpriority="high" class="mt-6 w-full max-w-xl rounded-md object-cover" style="height:clamp(190px,22vw,280px)" />}
       {points && (
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
           {points.map((point) => (
