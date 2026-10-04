@@ -17,7 +17,7 @@ export function getStaticPaths() {
 }
 const { area: a } = Astro.props;
 const path = `/service-areas/${a.slug}`;
-const title = `Hydro Jetting in ${a.name}, Ohio | ${business.name}`;
+const title = `${a.name}, Ohio Service Area: ${a.title} | ${business.name}`;
 const description = `${business.name} clears grease, roots, scale and sludge from drain and sewer lines in ${a.name}, OH. Residential and commercial hydro jetting with camera inspection.`;
 const pageUrl = `${SITE_URL}${path}`;
 const schema = [

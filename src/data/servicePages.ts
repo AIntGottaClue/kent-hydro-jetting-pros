@@ -1,4 +1,5 @@
-export const servicePages = [
+import core from './corePages.json';
+const baseServicePages = [
   {
     "slug": "residential-drain-cleaning",
     "name": "Residential Drain Cleaning",
@@ -160,3 +161,11 @@ export const servicePages = [
     ]
   }
 ];
+
+const coreSources: [string, string][] = [
+  ['https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P10053G5.TXT', 'EPA sewer cleaning and inspection guidance'],
+  ['https://www.kentohio.gov/living-here/utilities/water-and-sewer/', 'Kent water and sewer information'],
+];
+export const coreServices = core.services.map((x) => ({ ...x, sources: coreSources }));
+export const guidePages = core.guides.map((x) => ({ ...x, sources: coreSources }));
+export const servicePages = [...baseServicePages, ...coreServices];

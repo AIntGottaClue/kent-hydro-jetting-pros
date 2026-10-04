@@ -32,6 +32,13 @@ export const footerServiceLinks = [
   { href: '/services/residential-drain-cleaning', label: 'Residential Drain Cleaning' },
   { href: '/services/commercial-grease-lines', label: 'Commercial and Grease Lines' },
   { href: '/services/sewer-camera-inspection', label: 'Sewer Camera Inspection' },
+  { href: '/services/tree-root-intrusions', label: 'Tree Root Intrusions' },
+  { href: '/services/severe-grease-and-sludge', label: 'Severe Grease and Sludge' },
+  { href: '/services/mineral-and-scale-deposits', label: 'Mineral and Scale Deposits' },
+  { href: '/services/recurring-clogs-and-slow-drains', label: 'Recurring Clogs and Slow Drains' },
+  { href: '/services/preventative-maintenance', label: 'Preventative Maintenance' },
+  { href: '/guides/how-hydro-jetting-works', label: 'How Hydro Jetting Works' },
+  { href: '/guides/hydro-jetting-vs-snaking', label: 'Hydro Jetting vs Snaking' },
   { href: '/our-process', label: 'Our Process' },
 ] as const
 
