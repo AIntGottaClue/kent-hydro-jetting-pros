@@ -12,12 +12,18 @@ const {service:s}=Astro.props;
 const path=`/guides/${s.slug}`;
 const title=`${s.name} | Kent, Ohio | ${business.name}`;
 const schema=[{'@context':'https://schema.org','@type':'Article',headline:s.name,url:SITE_URL+path,publisher:{'@id':SITE_URL+'/#business'},about:'Hydro jetting in Kent, Ohio'},{'@context':'https://schema.org','@type':'FAQPage',mainEntity:s.faqs.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))}];
+const srcSentence = (items: [string, string][], cls = '') => {
+  const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const links = items.map(([url, label]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer"${cls ? ` class="${cls}"` : ' style="text-decoration:underline"'}>${esc(label.replace(/\s*\([^)]*\)\s*$/, '').replace(/:\s+/, ' '))}</a>`);
+  const list = links.length === 1 ? links[0] : `${links.slice(0, -1).join(', ')} and ${links[links.length - 1]}`;
+  return `The background on this page comes from ${list}.`;
+};
 ---
 <Base title={title} description={s.intro} path={path}>
   <Fragment slot="head">{schema.map(data=><JsonLd data={data}/>)}</Fragment>
   <PageHero title={s.name} intro={s.intro} breadcrumb={[{href:'/hydro-jetting',label:'Hydro Jetting'},{href:path,label:s.name}]} location={s.name}/>
   {s.sections.map(([heading,paragraphs],i)=><Section muted={i%2===1}><div class="max-w-4xl"><h2 class="text-3xl font-bold text-primary">{heading}</h2>{paragraphs.map(p=><p class="mt-5 leading-relaxed text-muted-foreground">{p}</p>)}</div></Section>)}
   <Section><h2 class="text-3xl font-bold text-primary">{s.name}: common questions</h2><div class="mt-7 max-w-4xl">{s.faqs.map(([q,a])=><details class="border-b border-border py-5"><summary class="cursor-pointer font-semibold text-primary">{q}</summary><p class="mt-4 leading-relaxed text-muted-foreground">{a}</p></details>)}</div></Section>
-  <Section muted><h2 class="text-2xl font-bold text-primary">Reference sources</h2><ul class="mt-5 space-y-3">{s.sources.map(([href,label])=><li><a href={href} class="text-primary underline" rel="noopener">{label}</a></li>)}</ul><h2 class="mt-9 text-2xl font-bold text-primary">Related pages</h2><ul class="mt-5 space-y-3"><li><a href={u('/hydro-jetting')} class="text-primary underline">Hydro Jetting</a></li>{guidePages.filter(x=>x.slug!==s.slug).map(x=><li><a href={u(`/guides/${x.slug}`)} class="text-primary underline">{x.name}</a></li>)}{servicePages.slice(0,8).map(x=><li><a href={u(`/services/${x.slug}`)} class="text-primary underline">{x.name}</a></li>)}</ul></Section>
+  <Section muted><p class="mt-5" set:html={srcSentence(s.sources, 'underline text-primary')} /><h2 class="mt-9 text-2xl font-bold text-primary">Related pages</h2><ul class="mt-5 space-y-3"><li><a href={u('/hydro-jetting')} class="text-primary underline">Hydro Jetting</a></li>{guidePages.filter(x=>x.slug!==s.slug).map(x=><li><a href={u(`/guides/${x.slug}`)} class="text-primary underline">{x.name}</a></li>)}{servicePages.slice(0,8).map(x=><li><a href={u(`/services/${x.slug}`)} class="text-primary underline">{x.name}</a></li>)}</ul></Section>
   <CtaBand title="Describe your drain" text="Tell us which fixtures are involved and what the line has been doing."/>
 </Base>
