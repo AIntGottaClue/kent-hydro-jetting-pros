@@ -17,19 +17,12 @@
 - How Hydro Jetting Works: https://kenthydrojetting.prosapp.site/guides/how-hydro-jetting-works/
 - Hydro Jetting vs Snaking: https://kenthydrojetting.prosapp.site/guides/hydro-jetting-vs-snaking/
 
-## Service areas
+## Neighborhoods
 - Kent, Ohio: https://kenthydrojetting.prosapp.site/service-areas/kent/
-- Stow, Ohio: https://kenthydrojetting.prosapp.site/service-areas/stow/
-- Ravenna, Ohio: https://kenthydrojetting.prosapp.site/service-areas/ravenna/
-- Streetsboro, Ohio: https://kenthydrojetting.prosapp.site/service-areas/streetsboro/
-- Hudson, Ohio: https://kenthydrojetting.prosapp.site/service-areas/hudson/
-- Tallmadge, Ohio: https://kenthydrojetting.prosapp.site/service-areas/tallmadge/
-- Cuyahoga Falls, Ohio: https://kenthydrojetting.prosapp.site/service-areas/cuyahoga-falls/
-- Munroe Falls, Ohio: https://kenthydrojetting.prosapp.site/service-areas/munroe-falls/
-- Brimfield, Ohio: https://kenthydrojetting.prosapp.site/service-areas/brimfield/
-- Franklin Township, Ohio: https://kenthydrojetting.prosapp.site/service-areas/franklin-township/
-- Rootstown, Ohio: https://kenthydrojetting.prosapp.site/service-areas/rootstown/
-- Aurora, Ohio: https://kenthydrojetting.prosapp.site/service-areas/aurora/
+- Historic South End, Ohio: https://kenthydrojetting.prosapp.site/service-areas/historic-south-end/
+- Mill District and North Water Street, Ohio: https://kenthydrojetting.prosapp.site/service-areas/mill-district/
+- West Main Street, Ohio: https://kenthydrojetting.prosapp.site/service-areas/west-main-street/
+- Fairchild Avenue and Haymaker Parkway, Ohio: https://kenthydrojetting.prosapp.site/service-areas/fairchild-avenue-haymaker-parkway/
 
 ## Contact
 - Phone: (877) 761-0283
