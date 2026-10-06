@@ -8,7 +8,8 @@ import Section from '../../components/Section.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import TextLink from '../../components/TextLink.astro';
 import { AlertTriangle, MapPin } from '@lucide/astro';
-import { areas, areaBySlug } from '../../data/areas';
+import { areas, areaBySlug, hoods } from '../../data/areas';
+import HoodBody from '../../components/HoodBody.astro';
 import { SITE_URL, business } from '../../lib/site';
 import { u } from '../../lib/utils';
 
@@ -16,6 +17,7 @@ export function getStaticPaths() {
   return areas.map((area) => ({ params: { slug: area.slug }, props: { area } }));
 }
 const { area: a } = Astro.props;
+const isHood = a.kind === 'hood';
 const path = `/service-areas/${a.slug}`;
 const title = `${a.name}, Ohio Service Area: ${a.title} | ${business.name}`;
 const description = `${business.name} clears grease, roots, scale and sludge from drain and sewer lines in ${a.name}, OH. Residential and commercial hydro jetting with camera inspection.`;
@@ -41,8 +43,8 @@ const schema = [
     ],
   },
 ];
-const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: a.faqs.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) };
-const nearby = a.nearby.map((s) => areaBySlug[s]);
+const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: (a.faqs ?? []).map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) };
+const nearby = isHood ? [] : hoods;
 const srcSentence = (items: [string, string][], cls = '') => {
   const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
   const links = items.map(([url, label]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer"${cls ? ` class="${cls}"` : ' style="text-decoration:underline"'}>${esc(label.replace(/\s*\([^)]*\)\s*$/, '').replace(/:\s+/, ' '))}</a>`);
@@ -50,7 +52,8 @@ const srcSentence = (items: [string, string][], cls = '') => {
   return `The background on this page comes from ${list}.`;
 };
 ---
-<Base title={title} description={description} path={path}>
+<Base title={isHood ? a.title : title} description={isHood ? a.description : description} path={path}>
+  {isHood ? <HoodBody a={a} /> : (<>
   {schema.map((s) => <JsonLd data={s} />)}
   <JsonLd data={faqSchema} />
   <PageHero
@@ -80,18 +83,18 @@ const srcSentence = (items: [string, string][], cls = '') => {
   </Section>
 
   <Section muted>
-    <SectionHeading title="Nearby towns we serve" />
+    <SectionHeading title="Neighborhoods in Kent" />
     <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {nearby.map((n) => (
         <li>
           <a href={u(`/service-areas/${n.slug}`)} class="group flex items-center gap-2 rounded-lg border border-border bg-card p-5 font-semibold text-primary hover:shadow-md">
             <MapPin class="size-4 text-ring" aria-hidden="true" />
-            <span class="group-hover:underline">Hydro jetting in {n.name}</span>
+            <span class="group-hover:underline">{n.name}</span>
           </a>
         </li>
       ))}
     </ul>
-    <div class="mt-6"><TextLink href="/service-areas">All service areas</TextLink></div>
+    <div class="mt-6"><TextLink href="/service-areas">All neighborhoods</TextLink></div>
   </Section>
 
   <CtaBand title={`Request drain service in ${a.name}`} text="Include the address, affected fixtures and any previous inspection record." />
@@ -109,4 +112,5 @@ const srcSentence = (items: [string, string][], cls = '') => {
     ]}
   />
   <CtaBand title={`Need hydro jetting in ${a.name}?`} text="Include your address and what the drain is doing, and we will follow up." />
+</>)}
 </Base>

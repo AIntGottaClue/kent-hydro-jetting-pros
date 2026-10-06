@@ -22,7 +22,7 @@ export const navLinks = [
   { href: '/hydro-jetting', label: 'Hydro Jetting' },
   { href: '/services', label: 'Services' },
   { href: '/our-process', label: 'Our Process' },
-  { href: '/service-areas', label: 'Service Areas' },
+  { href: '/service-areas', label: 'Neighborhoods' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ] as const
@@ -42,20 +42,7 @@ export const footerServiceLinks = [
   { href: '/our-process', label: 'Our Process' },
 ] as const
 
-export const serviceAreas = [
-  'Kent',
-  'Stow',
-  'Ravenna',
-  'Streetsboro',
-  'Hudson',
-  'Tallmadge',
-  'Cuyahoga Falls',
-  'Munroe Falls',
-  'Brimfield',
-  'Franklin Township',
-  'Rootstown',
-  'Aurora',
-] as const
+export const serviceAreas = ['Kent'] as const
 
 export const serviceOptions = [
   'Hydro Jetting',

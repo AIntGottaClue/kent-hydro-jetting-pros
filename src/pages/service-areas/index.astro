@@ -15,9 +15,8 @@ import { faqSchema } from '../../lib/seo';
 import { business } from '../../lib/site';
 import { areas } from '../../data/areas';
 import { cn, u } from '../../lib/utils';
-const title = 'Hydro Jetting Service Areas Near Kent, Ohio'
-const description =
-  'Kent Hydro Jetting Pros serves Kent, Stow, Ravenna, Streetsboro, Hudson, Tallmadge, Cuyahoga Falls and other nearby Ohio communities with professional hydro jetting.'
+const title = 'Kent, Ohio Neighborhoods We Serve | Hydro Jetting'
+const description = 'Kent Hydro Jetting Pros serves Kent neighborhoods including the Historic South End, the Mill District, West Main Street and the Fairchild Avenue and Haymaker Parkway area.'
 const path = '/service-areas';
 const home = areas[0];
 const nearby = areas.slice(1);
@@ -26,10 +25,10 @@ const nearby = areas.slice(1);
 
   <PageHero
   location={path === '/' ? 'Homepage' : title}
-    title="Hydro Jetting Service Areas Near Kent, Ohio"
-    intro="We are based in Kent and provide hydro jetting for homes and businesses throughout the surrounding communities."
-    points={['Based in Kent, Ohio', 'Residential and commercial', 'Portage and Summit counties', 'Ask about nearby towns']}
-    breadcrumb={[{ href: '/service-areas', label: 'Service Areas' }]}
+    title="Hydro Jetting in Kent Neighborhoods"
+    intro="Kent grew in distinct areas over time. Each neighborhood page covers how its history shapes drain line questions."
+    points={['Based in Kent, Ohio', 'Residential and commercial', 'Neighborhood pages', 'Camera inspection available']}
+    breadcrumb={[{ href: '/service-areas', label: 'Neighborhoods' }]}
   />
 
   <Section>
@@ -44,8 +43,8 @@ const nearby = areas.slice(1);
 
     <div class="mt-14">
       <SectionHeading
-        title="Towns we serve around Kent"
-        intro="Our hydro jetting services are available in each of these communities."
+        title="Neighborhoods in Kent"
+        intro="Choose the neighborhood closest to your property."
       />
       <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {nearby.map((town) => (
@@ -53,7 +52,7 @@ const nearby = areas.slice(1);
             <a href={u(`/service-areas/${town.slug}`)} class="group flex h-full items-start gap-3 rounded-lg border border-border bg-card p-5 transition-shadow hover:shadow-md">
               <MapPin class="mt-0.5 size-5 shrink-0 text-ring" aria-hidden="true" />
               <div>
-                <h3 class="font-bold text-primary group-hover:underline">Hydro jetting in {town.name}, OH</h3>
+                <h3 class="font-bold text-primary group-hover:underline">Hydro jetting in {town.name}</h3>
                 <p class="mt-1 text-sm leading-relaxed text-muted-foreground">{town.intro}</p>
               </div>
             </a>
@@ -65,8 +64,8 @@ const nearby = areas.slice(1);
 
   <Section muted>
     <SectionHeading
-      title="Don't see your town?"
-      intro={`If you are near Kent but your community is not listed, call ${business.phoneDisplay} or send a request with your address and we will let you know.`}
+      title="Don't see your street?"
+      intro={`If your street is not listed, call ${business.phoneDisplay} or send a request with your address and we will let you know.`}
     />
   </Section>
 

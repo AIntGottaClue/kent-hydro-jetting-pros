@@ -54,6 +54,6 @@ export const faqs: Faq[] = [
   {
     question: 'What areas do you serve?',
     answer:
-      'We are based in Kent, Ohio and serve nearby communities including Stow, Ravenna, Streetsboro, Hudson, Tallmadge, Cuyahoga Falls, Munroe Falls, Brimfield, Franklin Township, Rootstown and Aurora.',
+      'We are based in Kent, Ohio. Our neighborhood pages cover the Historic South End, the Mill District and North Water Street, West Main Street, and the Fairchild Avenue and Haymaker Parkway area.',
   },
 ]

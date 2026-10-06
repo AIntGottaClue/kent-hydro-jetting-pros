@@ -1,0 +1,682 @@
+[
+ {
+  "slug": "historic-south-end",
+  "name": "Historic South End",
+  "title": "Hydro Jetting in the Historic South End, Kent OH | Kent Hydro Jetting Pros",
+  "description": "Hydro jetting for homes in Kent's Historic South End: how railroad-era houses and later repairs shape drain line cleaning. Call (877) 761-0283.",
+  "hero": "Hydro jetting in Kent's Historic South End can clear grease, scale and roots from drain lines serving homes built for railroad workers. Many houses here are more than a century old and have been repaired many times, so the pipe may be a mix of eras. A camera look at the line first tells you whether it can take high-pressure cleaning.",
+  "bodyH2": "Hydro Jetting for Historic South End Homes",
+  "bodyPs": [
+   "The neighborhood's own history, written by resident Doria Daniels for [[aroundKent magazine|https://www.aroundkent.net/articles/historic-south-end-district-of-kent]], places its boundaries from Mogadore Road and Summit Street to Franklin Avenue, South Water Street and Cherry Street. She describes immigrant families who came for work around the rail yards, and gardens and fruit trees at nearly every house. Those details come from oral history and local records, not from plumbing files, but they point to old lots with mature plantings.",
+   "The [[Record-Courier reported|https://www.record-courier.com/story/news/2020/07/06/new-sign-denotes-historic-south-end-of-kent/42087021/]] that the area gained a local historic designation in November 2019 and that architects were documenting houses on Franklin Avenue that are over 100 years old, built from lumber company kits. Kent State University's [[community geography project|https://communitygeography.kent.edu/index.php/2025/08/04/who-lived-here-mapping-kents-south-end/]] maps who lived in the South End, and the neighborhood is often called the Flats or the back neighborhood. A house that old has almost certainly had its drain line patched, rerouted or replaced in part.",
+   "Hydro jetting washes pipe walls with high-pressure water and suits sound lines with grease, scale or roots. It is not a repair, and a weak section needs a different plan."
+  ],
+  "considerations": [
+   "Where the cleanout is, which may be in a basement, crawl space or outside wall",
+   "Whether any of the line has been replaced and with what",
+   "Fruit trees, grape arbors and other plantings near the lateral",
+   "Whether the house is a rental and who manages access",
+   "Which fixtures are affected and whether the basement drain is involved",
+   "Whether neighboring houses on the same street have similar backups"
+  ],
+  "svcH2": "Hydro Jetting Services for Historic South End Properties",
+  "svcLead": "Each service page answers one question. Choose the one closest to your drain's symptoms.",
+  "svc": {
+   "severe-grease-and-sludge": "Old kitchens can have decades of film on the line, and {{svc:severe-grease-and-sludge|severe grease and sludge}} explains how jetting clears it.",
+   "tree-root-intrusions": "Plantings close to older joints can invite roots, covered under {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "A drain that keeps slowing is the subject of {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Hard scale can narrow older iron and galvanized pipe, described under {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "To keep a cleaned line clear, read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in the South End",
+  "apps": [
+   {
+    "h": "Houses with a long repair history",
+    "p": "A house built in the 1800s has outlived several plumbing systems. Joints between old and new materials are common places for buildup, so knowing the repair history helps."
+   },
+   {
+    "h": "Gardens and fruit trees near the line",
+    "p": "The neighborhood is known for gardens and fruit trees. Roots seek water and can enter a cracked or loose joint, and a camera shows whether that is happening."
+   },
+   {
+    "h": "Rentals and shared houses",
+    "p": "Older houses are often split into units. If a shared line backs up, naming the affected unit helps the crew find the blockage and arrange access with the owner."
+   },
+   {
+    "h": "Basement and crawl space drains",
+    "p": "Low drains show a main line problem first. What comes up and when helps place where the blockage sits."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations for South End Houses",
+  "implPs": [
+   "The method depends on the pipe. These questions are worth settling first."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "An old line can look fine and still have a weak spot. Ask for a camera pass.",
+    "b": [
+     "See the pipe before pressure is applied",
+     "Share known repair notes",
+     "Plan for repair if the camera finds damage"
+    ]
+   },
+   {
+    "h": "Access in tight spaces",
+    "p": "Older houses can have cramped basements and narrow side yards.",
+    "b": [
+     "Locate the cleanout",
+     "Clear a path",
+     "Note steps or low ceilings"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "Cleaning a private line cannot repair a public sewer.",
+    "b": [
+     "Ask neighbors about the same backup",
+     "Note rain timing",
+     "Report widespread backups to the city"
+    ]
+   }
+  ],
+  "planH2": "How a Historic South End Visit Is Planned",
+  "planPs": [
+   "A visit follows a clear order."
+  ],
+  "steps": [
+   {
+    "t": "Describe the symptoms",
+    "d": "Say which fixtures are affected and since when."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout or floor drain."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the pipe condition."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet with a nozzle and pressure that fit the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Look again and decide on repair or a return visit."
+   }
+  ],
+  "mapH2": "The Historic South End on the Map",
+  "mapIntro": "The map shows the South End area for orientation only. It does not mark a business or define the neighborhood's boundaries.",
+  "map": {
+   "lat": 41.1455,
+   "lon": -81.3608,
+   "d": 0.012,
+   "label": "Area map near the Historic South End, Kent, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.37640%2C41.13350%2C-81.34520%2C41.15750&layer=mapnik"
+  },
+  "nearbyH2": "Other Kent Neighborhoods",
+  "nearbyP": "Kent grew in different areas over time. These pages cover the others.",
+  "faqs": [
+   {
+    "q": "Does a house this old need a camera inspection first?",
+    "a": "It helps. Age alone does not tell you what the line is made of or whether it was repaired."
+   },
+   {
+    "q": "Can jetting damage an old pipe?",
+    "a": "On a sound line it is generally suitable. A cracked or collapsed section should be assessed before pressure is used."
+   },
+   {
+    "q": "Do fruit trees cause drain problems?",
+    "a": "Roots can enter any loose joint. A camera shows whether roots are there."
+   },
+   {
+    "q": "What if my rental drain backs up?",
+    "a": "Tell the owner or manager and name the affected unit so access can be arranged."
+   },
+   {
+    "q": "Why does my basement drain back up first?",
+    "a": "It sits at the low point of the system, so a main line problem shows there."
+   },
+   {
+    "q": "Is jetting the same as snaking?",
+    "a": "No. Jetting washes the pipe wall, while a cable punches through a blockage."
+   },
+   {
+    "q": "Will cleaning repair a broken pipe?",
+    "a": "No. Repair is separate work."
+   },
+   {
+    "q": "Could the problem be in the street sewer?",
+    "a": "If neighbors see the same backup, it may be. If only your house is affected, start with the private line."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause. If buildup returns, ask about a schedule."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Your address, the affected fixtures, when it began and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting in the Historic South End",
+  "ctaPs": [
+   "Describe the symptoms and anything you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Portage County",
+  "city": "Kent",
+  "intro": "Hydro jetting in Kent's Historic South End can clear grease, scale and roots from drain lines serving homes built for railroad workers."
+ },
+ {
+  "slug": "mill-district",
+  "name": "Mill District and North Water Street",
+  "title": "Hydro Jetting in the Mill District, Kent OH | Kent Hydro Jetting Pros",
+  "description": "Hydro jetting for North Water Street and downtown Kent buildings along the Cuyahoga River: shops, galleries and older mixed-use lines. Call (877) 761-0283.",
+  "hero": "Hydro jetting in Kent's Mill District can clear grease, scale and roots from the drain lines of North Water Street shops, cafes and apartments. Many buildings here date from the river-powered industrial era, so plumbing often reflects many remodels. A camera inspection before cleaning shows what each line is made of.",
+  "bodyH2": "Hydro Jetting for Mill District and Downtown Buildings",
+  "bodyPs": [
+   "The [[Mill District|https://kentmilldistrict.com/]] is the name used for the business, arts and cultural district on North Water Street, taken from the mill the Williams Brothers established there in 1879. The street began as an industrial district, and today it holds coffee shops, galleries, bars and services in historic buildings.",
+   "The [[National Park Service lists|https://npgallery.nps.gov/AssetDetail/NRIS/74001603]] the Kent Industrial District on the National Register, covering part of downtown around the Cuyahoga River. The [[City of Kent|https://www.kentohio.gov/our-government/plans-reports-and-studies/dam-restoration-project/]] describes the 1836 sandstone arch dam as an historic icon of downtown. Buildings that close to the river and the old industrial sites tend to have layered histories, which matters for drains.",
+   "A cafe or bar adds kitchen and restroom load to a building plumbed for something else. Jetting can clear that line when it is sound, and inspection says whether it is."
+  ],
+  "considerations": [
+   "Whether the building is a single business or has apartments or tenants above",
+   "Where the grease trap or interceptor sits, if any",
+   "Basement or back-room cleanouts that may be hard to reach",
+   "Past renovations that added restrooms or kitchens",
+   "Whether the backup shows in a floor drain at the lowest level",
+   "Business hours and when access is possible"
+  ],
+  "svcH2": "Hydro Jetting Services for Mill District Properties",
+  "svcLead": "Choose the page that fits what your drain is doing.",
+  "svc": {
+   "severe-grease-and-sludge": "Cafes and bars can build film in their drains, as {{svc:severe-grease-and-sludge|severe grease and sludge}} explains.",
+   "tree-root-intrusions": "Buildings near river-side trees can see roots in older joints, covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "If a drain keeps slowing, {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}} helps narrow down why.",
+   "mineral-and-scale-deposits": "Older pipe can collect scale, explained in {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "A business that cannot afford a surprise backup can read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up Downtown",
+  "apps": [
+   {
+    "h": "Food and drink businesses",
+    "p": "Kitchens, coffee bars and taprooms put fats, sugars and solids into drains. The branch from the kitchen is usually the first to slow."
+   },
+   {
+    "h": "Galleries and studios in older buildings",
+    "p": "Studios and workshops can send paint residue, clay or other material down a drain. Telling the crew what goes down helps them plan."
+   },
+   {
+    "h": "Apartments above storefronts",
+    "p": "A shared stack means a low blockage shows on the lowest floor first. Naming the affected floors helps."
+   },
+   {
+    "h": "Buildings near the river",
+    "p": "Properties close to the Cuyahoga can have damp basements and low drains. Heavy rain can make a basement drain back up, so timing is useful to note."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations for Downtown Buildings",
+  "implPs": [
+   "Commercial work has extra moving parts."
+  ],
+  "impl": [
+   {
+    "h": "Scheduling",
+    "p": "Pick a time that keeps customers clear of the work area.",
+    "b": [
+     "Choose a slow period",
+     "Tell staff where the cleanout is",
+     "Confirm who can approve work"
+    ]
+   },
+   {
+    "h": "Branch versus building sewer",
+    "p": "A stoppage may be in one branch or the main building line.",
+    "b": [
+     "List the affected fixtures",
+     "Check neighbors",
+     "Ask for a camera pass"
+    ]
+   },
+   {
+    "h": "Interceptors",
+    "p": "Pumping an interceptor and jetting its pipes are separate jobs.",
+    "b": [
+     "Know where it is",
+     "Keep service records",
+     "Ask what each visit covers"
+    ]
+   }
+  ],
+  "planH2": "How a Mill District Visit Is Planned",
+  "planPs": [
+   "The order is the same as elsewhere, with extra care for access."
+  ],
+  "steps": [
+   {
+    "t": "Report the problem",
+    "d": "List the fixtures and floors affected."
+   },
+   {
+    "t": "Confirm access",
+    "d": "Locate cleanouts and get owner approval."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the line."
+   },
+   {
+    "t": "Jet",
+    "d": "Match nozzle and pressure to the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Check results and decide on follow-up."
+   }
+  ],
+  "mapH2": "The Mill District on the Map",
+  "mapIntro": "The map shows the North Water Street area for orientation only. It does not mark a business or set district boundaries.",
+  "map": {
+   "lat": 41.1538,
+   "lon": -81.3582,
+   "d": 0.012,
+   "label": "Area map near North Water Street, Kent, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.37380%2C41.14180%2C-81.34260%2C41.16580&layer=mapnik"
+  },
+  "nearbyH2": "Other Kent Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Why does my cafe drain slow down?",
+    "a": "Fats and solids collect on pipe walls over time. Jetting clears the film."
+   },
+   {
+    "q": "Can jetting be scheduled around business hours?",
+    "a": "Ask when you call so access can be arranged."
+   },
+   {
+    "q": "Does the building owner need to approve?",
+    "a": "If you rent, the owner or manager controls access to shared lines."
+   },
+   {
+    "q": "Will jetting clean my interceptor?",
+    "a": "No. Interceptors are serviced separately."
+   },
+   {
+    "q": "Why does my basement drain back up in heavy rain?",
+    "a": "It may be a sewer or drainage issue, not only your pipe. Note the timing."
+   },
+   {
+    "q": "Is a camera inspection needed?",
+    "a": "It helps in older buildings where the pipe layout is unknown."
+   },
+   {
+    "q": "What can be put down a studio drain?",
+    "a": "Ask the crew. Paint residue and clay can build up and need a plan."
+   },
+   {
+    "q": "Can cleaning fix a public sewer problem?",
+    "a": "No. If the cause is outside your property, the sewer owner handles it."
+   },
+   {
+    "q": "How often should a business line be cleaned?",
+    "a": "It depends on volume and line condition."
+   },
+   {
+    "q": "What should I tell the crew?",
+    "a": "The address, fixtures, timing and any trap or interceptor details."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting in the Mill District",
+  "ctaPs": [
+   "Describe the fixtures and floors involved.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Portage County",
+  "city": "Kent",
+  "intro": "Hydro jetting in Kent's Mill District can clear grease, scale and roots from the drain lines of North Water Street shops, cafes and apartments."
+ },
+ {
+  "slug": "west-main-street",
+  "name": "West Main Street",
+  "title": "Hydro Jetting on West Main Street, Kent OH | Kent Hydro Jetting Pros",
+  "description": "Hydro jetting for older homes and converted buildings on West Main Street in Kent, OH. Call (877) 761-0283.",
+  "hero": "Hydro jetting on West Main Street can clear grease, scale and roots from drain lines serving larger older homes and converted buildings. Houses of this age have often been remodeled, split into units or added onto, so the pipe may be a mix of eras. A camera pass shows what is in the line before any cleaning pressure is used.",
+  "bodyH2": "Hydro Jetting for West Main Street Houses",
+  "bodyPs": [
+   "The [[National Park Service lists|https://npgallery.nps.gov/AssetDetail/NRIS/77001082]] the West Main Street District, covering 409 to 625 West Main Street, for its landscape, commerce, architecture and social history, with mid nineteenth century revival and late Victorian styles. A Kent State University community geography project notes that [[history tours often stop at mansions on Main Street|https://communitygeography.kent.edu/index.php/2025/08/04/who-lived-here-mapping-kents-south-end/]], contrasting them with the working neighborhoods behind.",
+   "Large older houses tend to have more bathrooms, more kitchens and longer drain runs than a modest cottage. They may also be offices, apartments or rentals now. Every change adds a joint and a place for buildup to start.",
+   "The [[Kent Historical Society|https://www.kentohiohistory.org/collections/city-history]] traces the city's growth through three generations of the Kent family, a reminder that this street's houses were built and altered over a long span."
+  ],
+  "considerations": [
+   "Whether the house is a single home, a rental or an office",
+   "How many bathrooms and kitchens share the main line",
+   "Where the main cleanout is",
+   "Large trees on the street side and in back",
+   "Past remodels that added or moved plumbing",
+   "Whether the exterior of the property is subject to historic review before any digging"
+  ],
+  "svcH2": "Hydro Jetting Services for West Main Street Properties",
+  "svcLead": "Choose the page that matches the problem.",
+  "svc": {
+   "severe-grease-and-sludge": "Big kitchens in older houses can collect film, covered in {{svc:severe-grease-and-sludge|severe grease and sludge}}.",
+   "tree-root-intrusions": "Mature street trees can reach old joints, explained in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "If a drain returns to slow after each clearing, see {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Older iron pipe can gather scale, covered under {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "To plan regular cleaning, read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up on West Main Street",
+  "apps": [
+   {
+    "h": "Large houses with several bathrooms",
+    "p": "More fixtures on one line means more places a blockage can start. Knowing which fixtures are affected points to the stretch of pipe at fault."
+   },
+   {
+    "h": "Houses converted to units",
+    "p": "When a house is split, one drain may serve several households. A stoppage then affects people who may not share an owner."
+   },
+   {
+    "h": "Street trees and old laterals",
+    "p": "Large trees on a main street can have roots that reach older laterals. A camera shows whether roots are involved."
+   },
+   {
+    "h": "Remodeled kitchens and baths",
+    "p": "New fixtures tied into old pipe can create awkward angles that catch buildup."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations for Older Main Street Houses",
+  "implPs": [
+   "A few questions are worth settling first."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "Age does not tell you what the line is made of.",
+    "b": [
+     "Request a camera look",
+     "Share repair notes",
+     "Plan repair if damage is found"
+    ]
+   },
+   {
+    "h": "Shared access",
+    "p": "In a house with several households, access needs coordination.",
+    "b": [
+     "Tell tenants",
+     "Locate the cleanout",
+     "Agree on a time"
+    ]
+   },
+   {
+    "h": "Exterior work",
+    "p": "Cleaning inside a pipe does not change the outside of a building, but excavation can. Check with the city before digging on a historic property.",
+    "b": [
+     "Keep cleaning and repair separate",
+     "Ask the city first",
+     "Document findings"
+    ]
+   }
+  ],
+  "planH2": "How a West Main Street Visit Is Planned",
+  "planPs": [
+   "A visit follows a short sequence."
+  ],
+  "steps": [
+   {
+    "t": "Describe",
+    "d": "List the fixtures and when it began."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout."
+   },
+   {
+    "t": "Inspect",
+    "d": "Use a camera."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet to match the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Decide on follow-up."
+   }
+  ],
+  "mapH2": "West Main Street on the Map",
+  "mapIntro": "The map shows West Main Street for orientation only. It does not mark a business or define district boundaries.",
+  "map": {
+   "lat": 41.1538,
+   "lon": -81.3626,
+   "d": 0.012,
+   "label": "Area map near West Main Street, Kent, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.37820%2C41.14180%2C-81.34700%2C41.16580&layer=mapnik"
+  },
+  "nearbyH2": "Other Kent Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Does a big old house need a camera look first?",
+    "a": "It helps. A larger house has more pipe that could hide a problem."
+   },
+   {
+    "q": "Can roots from street trees block my line?",
+    "a": "They can enter older joints. A camera shows whether they are present."
+   },
+   {
+    "q": "What if my house is split into units?",
+    "a": "Tell the crew which units are affected and notify the others."
+   },
+   {
+    "q": "Is jetting safe on old pipe?",
+    "a": "On sound pipe it can be. Damaged pipe needs assessment first."
+   },
+   {
+    "q": "Does the city review drain work?",
+    "a": "The city may review exterior changes in a historic area. Cleaning inside a pipe is different from digging."
+   },
+   {
+    "q": "Why do upstairs and downstairs drains slow together?",
+    "a": "They may share a stack or branch."
+   },
+   {
+    "q": "Will cleaning fix a broken line?",
+    "a": "No. Repair is separate."
+   },
+   {
+    "q": "What does a camera inspection show?",
+    "a": "Material, joints, roots, deposits and damage."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Address, affected fixtures, timing and repair history."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting on West Main Street",
+  "ctaPs": [
+   "Describe the symptoms and what you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Portage County",
+  "city": "Kent",
+  "intro": "Hydro jetting on West Main Street can clear grease, scale and roots from drain lines serving larger older homes and converted buildings."
+ },
+ {
+  "slug": "fairchild-avenue-haymaker-parkway",
+  "name": "Fairchild Avenue and Haymaker Parkway",
+  "title": "Hydro Jetting Near Fairchild Avenue and Haymaker Parkway, Kent OH | Kent Hydro Jetting Pros",
+  "description": "Hydro jetting for homes and businesses near Fairchild Avenue and Haymaker Parkway in Kent, OH. Call (877) 761-0283.",
+  "hero": "Hydro jetting near Fairchild Avenue and Haymaker Parkway can clear grease, scale and roots from drain lines serving homes and businesses on both sides of the river. The streets here were reshaped over decades by a bypass and a bridge, so some properties sit beside major roads while others sit on quiet side streets. Inspect first so cleaning fits the line.",
+  "bodyH2": "Hydro Jetting Near Fairchild Avenue and Haymaker Parkway",
+  "bodyPs": [
+   "A Kent State University Libraries collection describes how [[Haymaker Parkway was built as a bypass around downtown|https://www.library.kent.edu/special-collections-and-archives/jack-davis-photographs-kent-ohio]] in the early 1970s because heavy rail traffic interrupted Main Street. Properties along that route were affected by the construction, and nearby blocks have seen change since.",
+   "The KentStater reported that the [[Fairchild Avenue Bridge project|https://kentstater.com/37821/uncategorized/kent-meets-goals-for-fairchild-avenue-bridge-project/]] took 19 years, replaced the Crain Avenue Bridge and connected Fairchild Avenue to North Water Street to protect the Crain neighborhood from traffic. Road work of that scale can mean disturbed ground and rerouted utilities.",
+   "The same KentStater archive tells of [[Woodard's Tavern at Fairchild and Mantua streets|https://kentstater.com/75406/uncategorized/kent-and-the-underground-railroad/]] in the Franklin Mills era, a reminder of how long this area has been settled. Settlement that old means plumbing of many generations."
+  ],
+  "considerations": [
+   "Whether the property is a house, a small business or a mix",
+   "Where the cleanout is, and whether road or sidewalk work has changed access",
+   "Mature trees on lots near the corridor",
+   "Whether other properties on the street have the same backup",
+   "Heavy-use kitchens or laundries",
+   "Past repairs or replacements"
+  ],
+  "svcH2": "Hydro Jetting Services Near Fairchild Avenue and Haymaker Parkway",
+  "svcLead": "Choose the page that fits your drain.",
+  "svc": {
+   "severe-grease-and-sludge": "Busy kitchens can coat a line, as {{svc:severe-grease-and-sludge|severe grease and sludge}} explains.",
+   "tree-root-intrusions": "Tree roots are covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "For drains that keep slowing, read {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Scale in older pipe is described under {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "To keep a line clear, see {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in This Corridor",
+  "apps": [
+   {
+    "h": "Homes beside busy roads",
+    "p": "Properties beside a main road often have laterals that cross sidewalks and tree lawns. Roots and settling can affect those runs."
+   },
+   {
+    "h": "Small businesses along the corridor",
+    "p": "Shops, offices and food service businesses vary widely in what they send down a drain. Telling the crew about use helps them plan."
+   },
+   {
+    "h": "Properties near road work",
+    "p": "Ground that has been disturbed for roads or utilities can shift later. A camera shows whether a line has sagged or separated."
+   },
+   {
+    "h": "Older homes on side streets",
+    "p": "Quieter side streets may hold older houses with older pipe. Their histories vary widely."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations in This Corridor",
+  "implPs": [
+   "A few questions are worth settling first."
+  ],
+  "impl": [
+   {
+    "h": "Line condition",
+    "p": "A camera shows whether the pipe is sound.",
+    "b": [
+     "Request a camera pass",
+     "Share repair notes",
+     "Plan repair if needed"
+    ]
+   },
+   {
+    "h": "Access",
+    "p": "Road and sidewalk changes can alter where a cleanout is reachable.",
+    "b": [
+     "Locate the cleanout",
+     "Clear a path",
+     "Note parking constraints"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "A private line cleaning cannot repair the public sewer.",
+    "b": [
+     "Ask neighbors",
+     "Note rain timing",
+     "Report widespread backups"
+    ]
+   }
+  ],
+  "planH2": "How a Visit Is Planned in This Corridor",
+  "planPs": [
+   "The order is simple."
+  ],
+  "steps": [
+   {
+    "t": "Describe",
+    "d": "List fixtures and timing."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout."
+   },
+   {
+    "t": "Inspect",
+    "d": "Camera view."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet to match."
+   },
+   {
+    "t": "Review",
+    "d": "Decide on follow-up."
+   }
+  ],
+  "mapH2": "Fairchild Avenue and Haymaker Parkway on the Map",
+  "mapIntro": "The map shows the area for orientation only. It does not mark a business or define boundaries.",
+  "map": {
+   "lat": 41.156,
+   "lon": -81.3585,
+   "d": 0.012,
+   "label": "Area map near Fairchild Avenue and Haymaker Parkway, Kent, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.37410%2C41.14400%2C-81.34290%2C41.16800&layer=mapnik"
+  },
+  "nearbyH2": "Other Kent Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Can road work affect my drain?",
+    "a": "Disturbed ground can shift later. A camera shows whether a line has sagged."
+   },
+   {
+    "q": "Should I have a camera look before jetting?",
+    "a": "Yes if the pipe is unknown or backups repeat."
+   },
+   {
+    "q": "Can roots from tree lawn trees reach my line?",
+    "a": "They can enter older joints."
+   },
+   {
+    "q": "Does jetting repair a sagging pipe?",
+    "a": "No. It cleans. Repair is separate."
+   },
+   {
+    "q": "Is my backup a city problem?",
+    "a": "If neighbors have the same issue, it may be. If only your property does, start with the private line."
+   },
+   {
+    "q": "What does a business need to tell the crew?",
+    "a": "The use of the building, fixtures affected and any trap details."
+   },
+   {
+    "q": "How long does a visit take?",
+    "a": "It varies with access and line condition. Ask when scheduling."
+   },
+   {
+    "q": "Will one cleaning be enough?",
+    "a": "It clears present buildup. Recurrence depends on the cause."
+   },
+   {
+    "q": "What if my cleanout is buried?",
+    "a": "Tell the crew when you call so they can plan access."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "The address, symptoms, timing and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting Near Fairchild Avenue",
+  "ctaPs": [
+   "Describe the symptoms and the line's history.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Portage County",
+  "city": "Kent",
+  "intro": "Hydro jetting near Fairchild Avenue and Haymaker Parkway can clear grease, scale and roots from drain lines serving homes and businesses on both sides of the river."
+ }
+]
